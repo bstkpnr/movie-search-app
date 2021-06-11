@@ -12,7 +12,7 @@ const MovieApp = ({ children }) => {
 
   const fetchMovies = async (searchValue) => {
     const response = await axios(
-      `https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchValue}`
+      `http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchValue}`
     );
     const data = response.data;
     setMovies(data.Search);
